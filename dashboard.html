@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>لوحة التحكم — Nova Studio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap" style="padding-top:10px; padding-bottom:80px">
+  <div class="dash-nav">
+    <div class="brand"><span class="dot"></span> Nova Studio</div>
+    <button id="logout-btn" class="dash-logout">تسجيل الخروج</button>
+  </div>
+
+  <span class="eyebrow">لوحة التحكم</span>
+  <h1 style="font-size:32px; margin-bottom:8px">أهلًا بيك 👋</h1>
+  <p style="color:#B9B4CA; margin-bottom:40px">أي تعديل هنا وتحفظه بيظهر لكل زوار الموقع فورًا.</p>
+
+  <div id="dash-root">
+    <div class="dash-editor">
+
+      <section class="dash-section">
+        <h2>نصوص الصفحة الرئيسية</h2>
+        <div id="edit-texts"></div>
+      </section>
+
+      <section class="dash-section">
+        <h2>الخدمات</h2>
+        <div id="edit-services"></div>
+      </section>
+
+      <section class="dash-section">
+        <h2>روابط التواصل</h2>
+        <div id="edit-links"></div>
+      </section>
+
+      <section class="dash-section">
+        <h2>الألوان</h2>
+        <div id="edit-colors"></div>
+      </section>
+
+      <div class="dash-save-bar">
+        <button id="save-btn" class="btn btn-primary">حفظ ونشر التعديلات</button>
+        <p id="save-msg" class="form-msg"></p>
+      </div>
+
+      <section class="dash-section">
+        <h2>تغيير كلمة السر</h2>
+        <form id="password-form">
+          <div class="field">
+            <label for="current-password">كلمة السر الحالية</label>
+            <input type="password" id="current-password" required>
+          </div>
+          <div class="field">
+            <label for="new-password">كلمة السر الجديدة</label>
+            <input type="password" id="new-password" required minlength="8">
+          </div>
+          <div class="field">
+            <label for="new-password-confirm">تأكيد كلمة السر الجديدة</label>
+            <input type="password" id="new-password-confirm" required minlength="8">
+          </div>
+          <button type="submit" class="btn btn-outline">تغيير كلمة السر</button>
+          <p id="password-msg" class="form-msg"></p>
+        </form>
+      </section>
+
+    </div>
+  </div>
+
+  <div style="margin-top:30px; display:flex; gap:14px; flex-wrap:wrap">
+    <a href="index.html" class="btn btn-outline">فتح الموقع الرئيسي</a>
+    <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank" rel="noopener" class="btn btn-outline">فتح Gmail</a>
+  </div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="firebase-config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
